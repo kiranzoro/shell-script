@@ -1,4 +1,3 @@
 #!/bin/bash
 FIRST_NUMBER=$1
-SECOND_NUMBER=$2
 echo "$FIRSTNUMBER"
