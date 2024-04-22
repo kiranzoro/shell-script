@@ -1,7 +1,6 @@
 #!/bin/bash
 
 USERID=$(id -u)
-
 echo "$USERID"
 
 if [ $USERID != 0 ]
