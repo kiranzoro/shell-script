@@ -8,7 +8,7 @@ then
     exit 1
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
 
 if [ $? != 0 ]
 then
