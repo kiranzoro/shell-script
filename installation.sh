@@ -1,7 +1,6 @@
 #!/bin/bash
 
 USERID=$(id -u)
-echo "$USERID"
 
 if [ $USERID != 0 ]
 then
@@ -9,3 +8,4 @@ then
     exit 1
 else
     echo "You are a super user"
+fi
