@@ -19,14 +19,14 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 Installation is $R FAILUTE $N"
+        echo -e "$2 Installation is $R FAILUTE $N"
         exit 1
     else
         echo -e "$2 installation is $G SUCCESS $N"
     fi
 }
 
-dnf install mysql -y &>> $LOGFILE
+dnf install mygsql -y &>> $LOGFILE
 VALIDATE $? "MYSQL"
 
 dnf install gigt -y &>> $LOGFILE
