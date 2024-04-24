@@ -2,6 +2,7 @@
 
 a=20
 
-for(i=0;i<=$a,i++){
-    echo "$i"
-}
+for i  in {1..$a}
+do
+    echo $i
+done
