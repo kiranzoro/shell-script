@@ -8,12 +8,21 @@ then
     exit 1
 fi
 
-dnf install mysql -y
+VALIDATE(){
+    if [ $1 -eq 0 ]
+    then
+        echo "Installation is Success"
+        exit 1
+    else
+        echo "$2 installation is Failure"
+}
 
-if [ $? != 0 ]
-then
-    echo "Installation of mysql is FAILURE"
-    exit 1
-else
-    echo "Installtion is SUCCESS"
-fi
+dnf install mysql -y
+VALIDATE $? "MYSQL"
+#if [ $? != 0 ]
+#then
+   # echo "Installation of mysql is FAILURE"
+  #  exit 1
+#else
+ #   echo "Installtion is SUCCESS"
+#fi
