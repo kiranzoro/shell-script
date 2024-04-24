@@ -4,6 +4,7 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+echo "Script started excuting at $TIMESTAMP"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -18,7 +19,7 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 Installation is FAILUTE"
+        echo "$2 Installation is $R FAILUTE $N"
         exit 1
     else
         echo -e "$2 installation is $G SUCCESS $N"
@@ -28,7 +29,7 @@ VALIDATE(){
 dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "MYSQL"
 
-dnf install git -y &>> $LOGFILE
+dnf install gigt -y &>> $LOGFILE
 VALIDATE $? "Git"
 #if [ $? != 0 ]
 #then
