@@ -18,7 +18,7 @@ VALIDATE(){
     fi
 }
 
-dnf install mysql -y
+dnf install mdysql -y
 VALIDATE $? "MYSQL"
 
 dnf install git -y
