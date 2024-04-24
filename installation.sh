@@ -20,6 +20,9 @@ VALIDATE(){
 
 dnf install mysql -y
 VALIDATE $? "MYSQL"
+
+dnf install git -y
+VALIDATE $? "Git"
 #if [ $? != 0 ]
 #then
    # echo "Installation of mysql is FAILURE"
