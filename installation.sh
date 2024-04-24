@@ -11,7 +11,7 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-        echo "Installation is Success"
+        echo "$2 Installation is Success"
         exit 1
     else
         echo "$2 installation is Failure"
