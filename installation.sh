@@ -21,7 +21,7 @@ VALIDATE(){
         echo "$2 Installation is FAILUTE"
         exit 1
     else
-        echo "$2 installation is "$G SUCCESS $N"
+        echo "$2 installation is "$G SUCCESS $N""
     fi
 }
 
