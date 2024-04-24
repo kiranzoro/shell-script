@@ -4,14 +4,14 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
-R=/e[31m
-G=/e[32m
-Y=/e[33m
-N=/e[0m]
+R="/e[31m"
+G="/e[32m"
+Y="/e[33m"
+N="/e[0m]"
 
 if [ $USERID != 0 ]
 then
-    echo "You are not a "$R supper user""
+    echo "You are not a supper user"
     exit 1
 fi
 
@@ -21,7 +21,7 @@ VALIDATE(){
         echo "$2 Installation is FAILUTE"
         exit 1
     else
-        echo "$2 installation is "$G SUCCESS $N""
+        echo "$2 installation is $G SUCCESS $N"
     fi
 }
 
