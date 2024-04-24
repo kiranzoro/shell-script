@@ -10,6 +10,13 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+if [ $USERID != 0 ]
+then
+    echo "You are not a supper user"
+    exit 1
+fi
+
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
