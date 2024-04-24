@@ -12,7 +12,7 @@ VALIDATE(){
     if [ $1 -nq 0 ]
     then
         echo "$2 Installation is FAILUTE"
-        exit 0
+        exit 1
     else
         echo "$2 installation is SUCCESS"
     fi
