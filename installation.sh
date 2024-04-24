@@ -1,6 +1,10 @@
 #!/bin/bash
 
 USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+
 
 if [ $USERID != 0 ]
 then
@@ -18,10 +22,10 @@ VALIDATE(){
     fi
 }
 
-dnf install mdysql -y
+dnf install mdysql -y &>> $LOGFILE
 VALIDATE $? "MYSQL"
 
-dnf install git -y
+dnf install git -y &>> $LOGFILE
 VALIDATE $? "Git"
 #if [ $? != 0 ]
 #then
