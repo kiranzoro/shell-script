@@ -7,7 +7,7 @@ LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
 R="/e[31m"
 G="/e[32m"
 Y="/e[33m"
-N="/e[0m]"
+N="/e[0m"
 
 if [ $USERID != 0 ]
 then
@@ -21,7 +21,7 @@ VALIDATE(){
         echo "$2 Installation is FAILUTE"
         exit 1
     else
-        echo "$2 installation is $G SUCCESS $N"
+        echo -e "$2 installation is $G SUCCESS $N"
     fi
 }
 
