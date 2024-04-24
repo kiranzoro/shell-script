@@ -30,6 +30,6 @@ do
         echo -e "$i is already installed ..... $Y SKIPPING $N"
     else
         dnf install $i -y &>>$LOGFILE
-        VALIDATE $? $i
+        VALIDATE $? "$i"
     fi
 done
