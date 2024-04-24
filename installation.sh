@@ -22,7 +22,7 @@ VALIDATE(){
     fi
 }
 
-dnf install mdysql -y &>> $LOGFILE
+dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "MYSQL"
 
 dnf install git -y &>> $LOGFILE
