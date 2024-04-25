@@ -1,1 +1,1 @@
-"This is other script"
+echo "This is other script"
