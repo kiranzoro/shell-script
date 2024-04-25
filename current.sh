@@ -2,6 +2,6 @@
 echo "This is current script"
  echo "This process id is : $$"
 
-./other.sh
+source ./other.sh
 
 echo "This is current script"
