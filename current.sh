@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "This is current script"
+ echo "This process id is : $$"
 
 ./other.sh
 
