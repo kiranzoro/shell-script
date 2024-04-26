@@ -20,6 +20,6 @@ touch -d 20240101 nalugu.log
 
 
 
-files=$(find . -name "*.log" +mtime +14)
+files=$(find $SOURCE_DIRECTORY -name "*.log" +mtime +14)
 
 echo $files
