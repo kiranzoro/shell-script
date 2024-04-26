@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
@@ -16,21 +18,21 @@ then
     exit 1
 fi
 
-VALIDATE(){
-    if [ $1 -ne 0 ]
-    then
-        echo -e "$2 Installation is $R FAILUTE $N"
-        exit 1
-    else
-        echo -e "$2 installation is $G SUCCESS $N"
-    fi
-}
+#VALIDATE(){
+    #if [ $1 -ne 0 ]
+    #then
+   #     echo -e "$2 Installation is $R FAILUTE $N"
+    #    exit 1
+   # else
+  #      echo -e "$2 installation is $G SUCCESS $N"
+ #   fi
+#}
 
 dnf install mysql -y &>> $LOGFILE
-VALIDATE $? "MYSQL"
+#VALIDATE $? "MYSQL"
 
 dnf install git -y &>> $LOGFILE
-VALIDATE $? "Git"
+#VALIDATE $? "Git"
 #if [ $? != 0 ]
 #then
    # echo "Installation of mysql is FAILURE"
