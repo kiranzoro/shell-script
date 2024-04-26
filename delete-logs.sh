@@ -10,5 +10,14 @@ else
 fi
 
 cd /tmp/app-logs
+touch -d 20240101 okati.log
+touch -d 20240101 rendu.log
+touch -d 20240101 okati.js
+touch -d 20240101 mudu.log
+touch -d 20240101 query.js
+touch -d 20240101 aidu.log
+touch -d 20240101 nalugu.log
 
-find . -name "*.log" +mtime -14
+
+
+find . -name "*.log" +mtime +14
