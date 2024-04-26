@@ -31,7 +31,7 @@ fi
 dnf install mysql -y &>> $LOGFILE
 #VALIDATE $? "MYSQL"
 
-dnf install gitt -y &>> $LOGFILE
+dnf install git -y &>> $LOGFILE
 #VALIDATE $? "Git"
 #if [ $? != 0 ]
 #then
