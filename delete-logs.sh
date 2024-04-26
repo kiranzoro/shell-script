@@ -2,7 +2,7 @@
 
 SOURCE_DIRECTORY=/tmp/app-logs
 
-if [ -d app-logs ]
+if [ -d $SOURCE_DIRECTORY ]
 then
     echo "echo Dir Exists"
 else
