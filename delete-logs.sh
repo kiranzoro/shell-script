@@ -20,7 +20,7 @@ touch -d 20240101 nalugu.log
 
 
 
-files=$(find . -name "*.log" -mtime +14)
+files=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
 while IFS= read -r line
 do
