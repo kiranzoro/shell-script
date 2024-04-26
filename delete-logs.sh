@@ -10,4 +10,5 @@ else
 fi
 
 cd /tmp/app-logs
-find . -name "*.log" +mtime +14
+
+find . type -f -name "*.log" +mtime -14
