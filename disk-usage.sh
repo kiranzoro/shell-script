@@ -9,7 +9,7 @@ do
     FOLDER=$(echo $line | awk -F " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-        MESSAGE+= "memory of $FOLDER has been exceeded to $USAGE, Please clear the disk\n"
+        MESSAGE+="memory of $FOLDER has been exceeded to $USAGE, Please clear the disk \n"
     fi
 done <<< $DISK_USAGE
 echo "message: $MESSAGE"
