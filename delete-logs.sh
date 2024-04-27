@@ -6,7 +6,8 @@ if [ -d $SOURCE_DIRECTORY ]
 then
     echo "Directtory Exists"
 else
-    echo "Please create Directory"
+    cd /tmp
+    mkdir app-logs
 fi
 
 cd /tmp/app-logs
