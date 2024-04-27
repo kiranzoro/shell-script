@@ -10,4 +10,5 @@ do
     if [ $USAGE -gt $DISK_THRESHOLD ]
     then
         echo "memory of $FOLDER has been exceeded to $USAGE, Please clear the disk"
+    fi
 done <<< $DISK_USAGE
